@@ -1,0 +1,165 @@
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">SIGNUP</h4>
+      </div>
+      <div class="modal-body">
+        <form name="signupForm" id="signupForm" method="POST" (submit)='signupFormSubmit(signupForm.valid)' novalidate #signupForm="ngForm">
+          <br>
+
+          <div class="form-group login-input">
+
+            <label for="user_name">Name</label>
+
+            <input type="text" name="user_name" id="user_name" #user_name="ngModel" class="text-input form-control" size="20" [(ngModel)]="userName" autocomplete="off" placeholder="username" required />
+          </div>
+
+          <div *ngIf="user_name.errors && user_name.touched" class="alert alert-danger">
+
+            <p *ngIf="user_name.errors.required ">Name is required.</p>
+
+          </div>
+
+          <div class="form-group login-input">
+
+            <label for="user_email">Email</label>
+
+            <input type="email" name="user_email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" id="user_email" #user_email="ngModel" class="text-input form-control" size="20" [(ngModel)]="userEmail" autocomplete="off" placeholder="email@company.com" required />
+          </div>
+          <div *ngIf="user_email.errors && user_email.touched" class="alert alert-danger">
+            <p *ngIf="user_email.errors.required ">Email is required.</p>
+<div *ngIf="subscriberSelect.errors && subscriberSelect.touched" class="alert alert-danger">
+
+                                    <!--<p *ngIf="subscriberSelect.errors.required">-->
+                                        <!--List selection is required.-->
+                                    <!--</p>-->
+
+                                </div>
+
+            <p *ngIf="user_email.errors.pattern">Invalid Email!</p>
+
+          </div>
+          <div class="form-group login-input">
+
+            <label for="user_password">Create Password</label>
+
+            <input type="password" name="user_password" #user_password="ngModel" id="user_password" class="text-input form-control" placeholder="**********" [(ngModel)]="userPassword" autocomplete="off" size="20" required/>
+          </div>
+          <div *ngIf="user_password.errors && user_password.touched" class="alert alert-danger">
+            <p *ngIf="user_password.errors.required">
+              Password is required.
+            </p>
+
+          </div>
+
+          <div class="form-group login-input">
+
+            <label for="user_con_pass">Confirm Password</label>
+
+            <input type="password" name="user_con_pass"  #user_con_pass="ngModel" id="user_con_pass" class="text-input form-control" placeholder="**********" [(ngModel)]="userConPass" autocomplete="off" size="20" >
+          </div>
+          <div *ngIf="user_con_pass.touched && userConPass != userPassword" class="alert alert-danger">
+
+            <p *ngIf="userConPass != userPassword">
+              Password doesnot match.
+            </p>
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12" style="margin-top:10px;">
+              <button mat-raised-button type="submit" id="submit" color="primary">SIGNUP</button>
+
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button mat-raised-button type="button" color="warn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="full-content-center">
+
+    <div class="login-wrap animated flipInX">
+      <div class="login-block col-md-6">
+
+        <!--<form role="form" >-->
+        <form name="loginForm" id="loginForm" method="POST" (submit)='loginFormSubmit(loginForm.valid)' novalidate #loginForm="ngForm">
+          <br>
+
+          <div>
+
+            <label for="user_login">Email</label>
+
+            <input type="email" name="user_login" id="user_login" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #user_login="ngModel" class="text-input form-control" size="20" [(ngModel)]="userLogin" autocomplete="off" placeholder="email@company.com" required />
+
+          </div>
+          <div *ngIf="user_login.errors && user_pass.touched" class="alert alert-danger">
+
+            <p *ngIf="user_login.errors.required">Email is required.</p>
+
+            <p *ngIf="user_login.errors.pattern">Invalid Email!</p>
+
+          </div>
+          <div>
+
+            <label for="user_pass">Password</label>
+
+            <input type="password" name="user_pass" id="user_pass" #user_pass="ngModel" class="text-input form-control" placeholder="**********" [(ngModel)]="userPass" autocomplete="off" size="20" required/>
+
+          </div>
+
+          <div *ngIf="user_pass.errors && user_pass.touched" class="alert alert-danger">
+
+            <p *ngIf="user_pass.errors.required">
+              Password is required.
+            </p>
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12" style="margin-top:10px;">
+              <button mat-raised-button type="submit" color="primary" id="submit">LOGIN</button>
+
+            </div>
+
+          </div>
+
+
+
+        </form>
+        <div class="row">
+          <div class="col-sm-12" style="margin-top:10px;">
+
+            <button mat-raised-button type="button" color="primary" data-toggle="modal" data-target="#myModal">SIGNUP</button>
+
+          </div>
+
+        </div>
+        <div id="report"></div>
+        <noscript><div class="alert alert-danger">Attention ! Please Turn On JavaScript </div></noscript>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- the overlay modal element -->
+<div class="md-overlay"></div>
+
+
+<link rel="stylesheet" type="text/css" href="assets/css/sweetalert.css">
+<script src="assets/js/sweetalert.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>

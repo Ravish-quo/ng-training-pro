@@ -1,0 +1,11 @@
+@import '../../assets/css/metisMenu.css';
+@import '../../assets/css/sb-admin-2.css';
+
+.navContainer{
+  height: 100%;
+}
+
+.sidebarNav{
+  background-color: #f1f1f1;
+  padding-top: 50px;
+}

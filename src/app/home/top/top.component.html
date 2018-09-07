@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon [matMenuTriggerFor]="menu">menu</mat-icon>
+    <span>ADMIN PANEL</span>
+    <span class="example-spacer"></span>
+    <mat-icon [matMenuTriggerFor]="menu" class="icon_style">keyboard_arrow_down</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button *ngIf="authorize != 'personate'" (click)="logout();" mat-menu-item>Logout</button>
+      <button *ngIf="authorize == 'personate'" (click)="exit();" mat-menu-item>Exit</button>
+    </mat-menu>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+<!-- /.navbar-header -->
+
+<!--<ul class="nav navbar-top-links navbar-right">-->
+  <!--&lt;!&ndash; /.dropdown &ndash;&gt;-->
+  <!--<li class="dropdown">-->
+    <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">-->
+      <!--<i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>-->
+    <!--</a>-->
+    <!--<ul class="dropdown-menu dropdown-user">-->
+      <!--&lt;!&ndash; <li><a href="#"><i class="fa fa-gear fa-fw"></i> Change Password</a>-->
+      <!--</li>-->
+      <!--<li class="divider"></li>-->
+<!--&ndash;&gt;   <li *ngIf="authorize != 'personate'">-->
+      <!--<a href="#" (click)="logout();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>-->
+      <!--</li>-->
+      <!--<li *ngIf="authorize == 'personate'">-->
+        <!--<a href="#" (click)="exit();"><i class="fa fa-sign-out fa-fw"></i> Exit</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+    <!--&lt;!&ndash; /.dropdown-user &ndash;&gt;-->
+  <!--</li>-->
+  <!--&lt;!&ndash; /.dropdown &ndash;&gt;-->
+<!--</ul>-->
+<!--&lt;!&ndash; /.navbar-top-links &ndash;&gt;-->

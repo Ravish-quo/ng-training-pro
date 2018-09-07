@@ -1,0 +1,43 @@
+<!--<div class="navbar-default sidebar" role="navigation">-->
+  <!--<div class="sidebar-nav navbar-collapse">-->
+    <!--<ul class="nav" id="side-menu">-->
+      <!--<li class="sidebar-search">-->
+        <!--<div class="input-group custom-search-form">-->
+
+          <!--<label>Welcome {{name}}</label>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash; /input-group &ndash;&gt;-->
+      <!--</li>-->
+      <!--<li *ngIf="authorize == 'superadmin'">-->
+        <!--<a href="/organizations"><i class="fa fa-dashboard fa-fw"></i> Organizations</a>-->
+      <!--</li>-->
+      <!--<li *ngIf="authorize != 'superadmin'">-->
+        <!--<a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>-->
+      <!--</li>-->
+      <!--<li *ngIf="authorize != 'superadmin' && authorize != 'user'">-->
+        <!--<a href="/users"><i class="fa fa-users fa-fw"></i> Users</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</div>-->
+    <ul class="nav" id="side-menu">
+      <li class="sidebar-search">
+        <div class="input-group custom-search-form">
+
+          <label>Welcome </label>
+
+        </div>
+        <!-- /input-group -->
+      </li>
+      <li *ngIf="authorize == 'superadmin'">
+        <a routerLink="/home/organizations"><i class="fa fa-dashboard fa-fw"></i> Organizations</a>
+      </li>
+      <li *ngIf="authorize != 'superadmin'">
+        <a routerLink="/home/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+      </li>
+      <li *ngIf="authorize != 'superadmin' && authorize != 'user'">
+        <a routerLink="/home/users"><i class="fa fa-users fa-fw"></i> Users</a>
+      </li>
+    </ul>
+

@@ -1,0 +1,107 @@
+{
+  "login": [
+    {
+      "name": "Ravish Sharma",
+      "email": "ravish2208@gmail.com",
+      "password": "ravish",
+      "is_admin": true,
+      "organizations": {},
+      "id": 0
+    },
+    {
+      "id": 1,
+      "name": "hello",
+      "organizations": {},
+      "email": "hello@gmail.com",
+      "password": "hello",
+      "is_admin": false
+    },
+    {
+      "id": 2,
+      "name": "harsh",
+      "organizations": {
+        "id": 1,
+        "is_admin": true
+      },
+      "email": "harsh@gmail.com",
+      "password": "harsh",
+      "is_admin": false
+    },
+    {
+      "id": 3,
+      "name": "Vishal",
+      "organizations": {},
+      "email": "vishal@gmail.com",
+      "password": "123456",
+      "is_admin": false
+    },
+    {
+      "id": 4,
+      "name": "Nikhil",
+      "organizations": {},
+      "email": "nikhil@gmail.com",
+      "password": "123456",
+      "is_admin": false
+    },
+    {
+      "id": 5,
+      "name": "akshay",
+      "organizations": {
+        "id": 0,
+        "is_admin": true
+      },
+      "email": "akshay@gmail.com",
+      "password": "123456",
+      "is_admin": false
+    },
+    {
+      "id": 6,
+      "name": "sahil",
+      "organizations": {
+        "id": 1,
+        "is_admin": false
+      },
+      "email": "sahil@gmail.com",
+      "password": "123456",
+      "is_admin": false
+    },
+    {
+      "id": 7,
+      "name": "harry schrovski",
+      "organizations": {
+        "id": 1,
+        "is_admin": false
+      },
+      "email": "harry@gmail.com",
+      "password": "123456",
+      "is_admin": false
+    },
+    {
+      "id": 8,
+      "name": "kunal Nischal",
+      "organizations": {
+        "id": 1,
+        "is_admin": false
+      },
+      "email": "kunal@gmail.com",
+      "password": "123456",
+      "is_admin": false
+    }
+  ],
+  "organization": [
+    {
+      "name": "Great",
+      "email": "akshay@gmail.com",
+      "phone": 8053023007,
+      "location": "Janakpuri East, Delhi",
+      "id": 0
+    },
+    {
+      "name": "Hello",
+      "email": "harsh@gmail.com",
+      "phone": 2113256488,
+      "location": "kurukshetra",
+      "id": 1
+    }
+  ]
+}

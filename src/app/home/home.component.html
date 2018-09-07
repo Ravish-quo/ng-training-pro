@@ -1,0 +1,16 @@
+
+<top-bar (toggle) = "sidenav.toggle()"></top-bar>
+<!--<router-outlet></router-outlet>-->
+<mat-sidenav-container class="navbar-default navContainer">
+
+  <mat-sidenav #sidenav mode="side" opened="true" class="col-xs-2 sidebarNav">
+    <side-bar></side-bar>
+  </mat-sidenav>
+
+  <div class="col-xs-10">
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+</mat-sidenav-container>
