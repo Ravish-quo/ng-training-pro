@@ -10,11 +10,11 @@
     },
     {
       "id": 1,
-      "name": "hello",
+      "name": "Udham Singh",
       "organizations": {},
-      "email": "hello@gmail.com",
-      "password": "hello",
-      "is_admin": false
+      "email": "udham@gmail.com",
+      "password": "udham",
+      "is_admin": true
     },
     {
       "id": 2,

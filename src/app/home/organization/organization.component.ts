@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'organizations',
+  selector: 'app-organizations',
   templateUrl: 'organizations.component.html'
 })
 
@@ -15,13 +15,13 @@ export class OrganizationComponent implements OnInit {
 
   }
 
-  organization:any = [];
+  organization: any = [];
 
   ngOnInit(): void {
 
     this.http.get('http://localhost:3000/organization')
       .subscribe(res => {
-        //console.log(res);
+        // console.log(res);
         this.organization = res;
         console.log(this.organization);
         // this.exist_function('', '');

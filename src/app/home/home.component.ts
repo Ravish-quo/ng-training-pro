@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'home-side',
+  selector: 'app-home-side',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
